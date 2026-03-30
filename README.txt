@@ -1,15 +1,20 @@
-The Carpet Cleaning Company website pack
+THE CARPET CLEANING COMPANY
+Website sales site for carpet cleaners
 
 Files included:
-index.html
-assets/styles.css
-assets/script.js
+- index.html
+- pricing.html
+- examples.html
+- contact.html
+- assets/styles.css
+- assets/script.js
 
 How to use:
-1. Upload all files to your hosting or GitHub repo
-2. Keep the assets folder in the same place as index.html
-3. Edit the text, prices, phone number, email and links inside index.html
-4. Replace the form action with your own form handler if needed
+1. Upload all files and folders to your hosting or GitHub Pages repo.
+2. Keep the assets folder in the same place as the HTML files.
+3. Edit phone number, email, website and pricing in the HTML files.
+4. Replace the TC mark with your logo if needed.
 
 Notes:
-This is an original site inspired by the simple offer led structure of websites like Website Rentals, but written and styled specifically for carpet cleaners.
+- This site is inspired by a clean website rental style sales flow, but it is an original build.
+- The pricing shown is example pricing only.

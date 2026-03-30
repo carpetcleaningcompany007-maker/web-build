@@ -1,1022 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Carpet Cleaning Company | Websites for Carpet Cleaners</title>
-  <meta name="description" content="Beautiful websites, landing pages and technical support for carpet cleaners. Modern design, fast setup, strong conversion structure and ongoing support." />
+  <meta name="description" content="Beautiful websites, landing pages and digital tools built specifically for carpet cleaners. Premium design, strong local SEO structure, fast pages and better enquiries.">
+  <meta name="theme-color" content="#0f2740">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f8fbfe;
-      --bg-2: #eef5fb;
-      --white: #ffffff;
-      --text: #0d2238;
-      --muted: #5b7188;
-      --line: rgba(13, 34, 56, 0.10);
-      --line-strong: rgba(13, 34, 56, 0.16);
-      --accent: #2b8cff;
-      --accent-soft: #e9f3ff;
-      --accent-dark: #1667c8;
-      --gold: #f2c96d;
-      --shadow: 0 18px 60px rgba(20, 44, 72, 0.10);
-      --shadow-soft: 0 10px 30px rgba(20, 44, 72, 0.08);
-      --radius: 28px;
-      --radius-sm: 18px;
-      --max: 1220px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(43, 140, 255, 0.08), transparent 34%),
-        linear-gradient(180deg, #fbfdff 0%, var(--bg) 45%, var(--bg-2) 100%);
-      line-height: 1.55;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.86);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(13, 34, 56, 0.06);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-width: 0;
-    }
-
-    .brand-badge {
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #0f4da1, #2b8cff);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-size: 18px;
-      font-weight: 900;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .brand-copy strong {
-      display: block;
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
-
-    .brand-copy span {
-      display: block;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 18px;
-      border-radius: 999px;
-      background: var(--text);
-      color: #fff;
-      font-weight: 800;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .hero {
-      padding: 42px 0 30px;
-    }
-
-    .hero-wrap {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .hero-copy,
-    .hero-panel {
-      border-radius: 34px;
-      background: rgba(255,255,255,0.8);
-      border: 1px solid rgba(13, 34, 56, 0.08);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-copy {
-      padding: 44px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      margin: 0 0 16px;
-      font-size: clamp(40px, 5.6vw, 74px);
-      line-height: 0.96;
-      letter-spacing: -0.05em;
-      max-width: 720px;
-    }
-
-    .hero h1 .blue { color: var(--accent-dark); }
-
-    .hero p {
-      margin: 0 0 24px;
-      color: var(--muted);
-      font-size: clamp(16px, 1.8vw, 19px);
-      max-width: 690px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 22px;
-      border-radius: 999px;
-      font-weight: 800;
-      border: 1px solid transparent;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 26px rgba(20,44,72,0.10);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), #f6df9c);
-      color: #1d232e;
-    }
-
-    .btn-secondary {
-      background: var(--white);
-      border-color: var(--line-strong);
-      color: var(--text);
-    }
-
-    .hero-points {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .point {
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: #fff;
-      border: 1px solid rgba(13, 34, 56, 0.08);
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .point strong {
-      display: block;
-      color: var(--text);
-      font-size: 15px;
-      margin-bottom: 4px;
-    }
-
-    .hero-panel {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      background: linear-gradient(180deg, #fdfefe, #f2f8fd);
-    }
-
-    .mock-browser {
-      border-radius: 26px;
-      background: #fff;
-      border: 1px solid rgba(13,34,56,0.08);
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-    }
-
-    .browser-bar {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 14px 16px;
-      border-bottom: 1px solid rgba(13,34,56,0.07);
-      background: #f8fbfe;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #d4dfeb;
-    }
-
-    .browser-body {
-      min-height: 520px;
-      padding: 24px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.30), rgba(255,255,255,0.88)),
-        url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .mini-site {
-      max-width: 360px;
-      padding: 22px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.88);
-      border: 1px solid rgba(13,34,56,0.08);
-      box-shadow: 0 20px 40px rgba(20,44,72,0.08);
-    }
-
-    .mini-site small {
-      display: inline-block;
-      margin-bottom: 10px;
-      color: var(--accent-dark);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .mini-site h2 {
-      margin: 0 0 10px;
-      font-size: 30px;
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-    }
-
-    .mini-site p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .mini-summary {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .mini-summary div {
-      padding: 14px;
-      border-radius: 18px;
-      background: #fff;
-      border: 1px solid rgba(13,34,56,0.08);
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .mini-summary strong {
-      display: block;
-      color: var(--text);
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
-
-    section { padding: 34px 0; }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 16px;
-      margin-bottom: 20px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(30px, 4.2vw, 48px);
-      line-height: 1;
-      letter-spacing: -0.05em;
-    }
-
-    .section-head p {
-      margin: 0;
-      max-width: 700px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: var(--radius);
-      border: 1px solid rgba(13,34,56,0.08);
-      box-shadow: var(--shadow-soft);
-      padding: 26px;
-    }
-
-    .icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 18px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
-      font-size: 24px;
-      font-weight: 900;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 24px;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .split-panel {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 18px;
-    }
-
-    .steps {
-      display: grid;
-      gap: 14px;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 14px;
-      align-items: start;
-      padding: 18px;
-      border-radius: 22px;
-      background: #fff;
-      border: 1px solid rgba(13,34,56,0.08);
-    }
-
-    .step-no {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent-dark), var(--accent));
-      color: #fff;
-      font-weight: 900;
-    }
-
-    .step h3 {
-      margin: 0 0 6px;
-      font-size: 18px;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: start;
-      gap: 12px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .feature-item b { color: var(--text); }
-
-    .promo-box {
-      min-height: 100%;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.30), rgba(255,255,255,0.86)),
-        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .promo-inner {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 28px;
-    }
-
-    .promo-badge {
-      width: fit-content;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.80);
-      color: var(--accent-dark);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .promo-inner h3 {
-      margin: 0 0 8px;
-      font-size: 36px;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      max-width: 460px;
-    }
-
-    .promo-inner p {
-      margin: 0;
-      max-width: 480px;
-      color: #38506a;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .price-card {
-      position: relative;
-      background: #fff;
-      border-radius: 30px;
-      border: 1px solid rgba(13,34,56,0.08);
-      box-shadow: var(--shadow-soft);
-      padding: 28px;
-    }
-
-    .price-card.featured {
-      border-color: rgba(43, 140, 255, 0.32);
-      box-shadow: 0 22px 55px rgba(43,140,255,0.13);
-      transform: translateY(-4px);
-    }
-
-    .price-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-
-    .tag {
-      display: inline-flex;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent-dark);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .price-card h3 {
-      margin: 0 0 8px;
-      font-size: 28px;
-      line-height: 1;
-      letter-spacing: -0.04em;
-    }
-
-    .price {
-      margin: 0 0 14px;
-      font-size: 42px;
-      line-height: 1;
-      letter-spacing: -0.05em;
-      font-weight: 900;
-    }
-
-    .price span {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--muted);
-    }
-
-    .price-card p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .price-list {
-      padding: 0;
-      margin: 0 0 22px;
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .price-list li {
-      position: relative;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .price-list li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent-dark);
-    }
-
-    .price-card .btn { width: 100%; }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .faq-item {
-      background: #fff;
-      border: 1px solid rgba(13,34,56,0.08);
-      border-radius: 24px;
-      box-shadow: var(--shadow-soft);
-      padding: 24px;
-    }
-
-    .faq-item h3 {
-      margin: 0 0 8px;
-      font-size: 20px;
-      line-height: 1.1;
-    }
-
-    .faq-item p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .final-cta {
-      padding: 34px;
-      background: linear-gradient(135deg, #0e2036, #173d65);
-      color: #fff;
-      border-radius: 34px;
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .final-cta h2 {
-      margin: 0 0 12px;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 0.96;
-      letter-spacing: -0.05em;
-    }
-
-    .final-cta p {
-      margin: 0;
-      color: rgba(255,255,255,0.76);
-      max-width: 650px;
-      font-size: 16px;
-    }
-
-    .contact-panel {
-      padding: 22px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 26px;
-      backdrop-filter: blur(6px);
-    }
-
-    .contact-panel h3 {
-      margin: 0 0 8px;
-      font-size: 22px;
-    }
-
-    .contact-panel p {
-      margin: 0 0 16px;
-      color: rgba(255,255,255,0.74);
-      font-size: 15px;
-    }
-
-    .contact-links {
-      display: grid;
-      gap: 12px;
-    }
-
-    .contact-link {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding: 15px 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .footer {
-      padding: 28px 0 42px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer .container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(13,34,56,0.08);
-    }
-
-    @media (max-width: 1100px) {
-      .hero-wrap,
-      .split-panel,
-      .pricing-grid,
-      .faq-grid,
-      .final-cta,
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
-      .price-card.featured { transform: none; }
-      .hero-points,
-      .mini-summary { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 760px) {
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
-      .hero-copy,
-      .hero-panel,
-      .card,
-      .price-card,
-      .faq-item,
-      .final-cta { padding: 22px; }
-      .hero h1 { line-height: 1; }
-      .hero-actions { flex-direction: column; }
-      .btn { width: 100%; }
-      .browser-body { min-height: 380px; padding: 18px; }
-      .mini-site { max-width: 100%; }
-      .section-head { display: block; }
-      .section-head p { margin-top: 10px; }
-      .contact-link { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+  <div class="site-bg"></div>
+
   <header class="site-header">
     <div class="container nav">
-      <a href="#top" class="brand">
-        <div class="brand-badge">TC</div>
-        <div class="brand-copy">
+      <a class="brand" href="#top" aria-label="The Carpet Cleaning Company home">
+        <span class="brand-mark">TC</span>
+        <span class="brand-copy">
           <strong>The Carpet Cleaning Company</strong>
-          <span>Website design for carpet cleaners</span>
-        </div>
+          <small>Websites for carpet cleaners</small>
+        </span>
       </a>
-      <nav class="nav-links">
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button>
+
+      <nav id="site-menu" class="site-menu">
         <a href="#services">Services</a>
-        <a href="#how">How it works</a>
-        <a href="#plans">Plans</a>
+        <a href="#benefits">Why us</a>
+        <a href="#pricing">Plans</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-btn">Get started</a>
       </nav>
-      <a class="nav-cta" href="#contact">Get started</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container hero-wrap">
-        <div class="hero-copy">
-          <div class="eyebrow">Website design and technical help for carpet cleaners</div>
-          <h1>Beautiful websites for <span class="blue">carpet cleaners</span> that look premium and win more enquiries.</h1>
-          <p>I build modern websites, focused landing pages and useful technical tools for carpet cleaners who want to look sharper online, stand out locally and convert more visitors into real jobs.</p>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Beautiful website design for carpet cleaners</span>
+          <h1>Make your carpet cleaning business look premium online.</h1>
+          <p class="hero-text">We build clean, modern websites and landing pages for carpet cleaners who want more trust, more local visibility and more serious enquiries. Not cheap looking. Not generic. Properly designed to help you win work.</p>
+
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Book a website call</a>
-            <a href="#plans" class="btn btn-secondary">View plans</a>
+            <a class="btn btn-gold" href="#contact">Book a website call</a>
+            <a class="btn btn-light" href="#pricing">See plans</a>
           </div>
+
           <div class="hero-points">
-            <div class="point"><strong>Fast setup</strong>Clean pages built around real service businesses</div>
-            <div class="point"><strong>Looks premium</strong>Not cheap, dated or generic like most local sites</div>
-            <div class="point"><strong>Ongoing help</strong>Landing pages, tweaks, ideas and technical support</div>
+            <div class="point-card">
+              <strong>Cleaner specific</strong>
+              <span>Built around carpet, upholstery, rugs, stain removal and local service pages.</span>
+            </div>
+            <div class="point-card">
+              <strong>Looks expensive</strong>
+              <span>Sharper layout, stronger wording, cleaner spacing and a more premium feel.</span>
+            </div>
+            <div class="point-card">
+              <strong>Beyond websites</strong>
+              <span>Landing pages, review funnels, quote sections and useful digital extras.</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero-panel">
-          <div class="mock-browser">
-            <div class="browser-bar">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+        <div class="hero-visual reveal delay-1">
+          <div class="browser-card">
+            <div class="browser-top">
+              <span></span><span></span><span></span>
             </div>
             <div class="browser-body">
-              <div class="mini-site">
-                <small>Built for local service brands</small>
-                <h2>Turn a cleaner into a proper brand online</h2>
-                <p>Luxury style visuals, stronger trust signals, sharper pages and a layout made to generate more calls and quote requests.</p>
+              <div class="mini-hero">
+                <span class="mini-tag">Premium cleaner websites</span>
+                <h2>Turn a local carpet cleaner into a proper brand.</h2>
+                <p>Service pages, location pages, quote forms, review areas and modern design that helps people trust you faster.</p>
+                <div class="mini-stats">
+                  <div><strong>Fast</strong><span>Mobile friendly build</span></div>
+                  <div><strong>SEO</strong><span>Local service structure</span></div>
+                  <div><strong>Ongoing</strong><span>Support and upgrades</span></div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="mini-summary">
-            <div><strong>1</strong>Main page or landing page</div>
-            <div><strong>SEO</strong>Service and area page structure</div>
-            <div><strong>Ongoing</strong>Support and improvements</div>
+          <div class="floating-card one">
+            <span>Modern layouts</span>
+            <strong>Cleaner. Sharper. More premium.</strong>
+          </div>
+          <div class="floating-card two">
+            <span>Built for enquiries</span>
+            <strong>Calls, quote forms and trust.</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services">
+    <section class="section logos-strip reveal">
+      <div class="container strip-card">
+        <p>Ideal for cleaners offering carpet cleaning, upholstery cleaning, rug cleaning, stain removal, hard floor cleaning and commercial work.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>What I can build</h2>
-          </div>
-          <p>Inspired by the clean offer led structure used on Website Rentals, this version is more tailored to carpet cleaners, with clearer positioning around premium design, local service pages and technical support. The reference site markets websites for UK local businesses and highlights a £49 per month offer with no contracts, no setup fees and a 48 hour turnaround. ([websiterentals.co.uk](https://websiterentals.co.uk/?utm_source=chatgpt.com))</p>
+        <div class="section-head reveal">
+          <span class="section-kicker">Services</span>
+          <h2>What we can build for you</h2>
+          <p>Everything is designed around what actually helps a carpet cleaner look more established and get more enquiries.</p>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
+        <div class="grid grid-3">
+          <article class="card reveal">
             <div class="icon">✦</div>
             <h3>Landing pages</h3>
-            <p>Single page websites for cleaners who want something sharp, modern and built to get calls and quote requests quickly.</p>
+            <p>Single page sites for ads, promotions or a sharp first website that makes your business look the part.</p>
           </article>
-
-          <article class="card">
+          <article class="card reveal delay-1">
             <div class="icon">⌂</div>
-            <h3>Full business websites</h3>
-            <p>Homepages, service pages, location pages, review sections and clear calls to action designed for carpet cleaning businesses.</p>
+            <h3>Full websites</h3>
+            <p>Home pages, service pages, area pages, reviews, FAQs and strong calls to action built into one clean website.</p>
           </article>
-
-          <article class="card">
+          <article class="card reveal delay-2">
             <div class="icon">⚙</div>
-            <h3>Technical development</h3>
-            <p>Review funnels, quote forms, small digital tools, page improvements and practical help around the website side of the business.</p>
+            <h3>Technical extras</h3>
+            <p>Quote forms, review funnels, before and after sections, lead pages and useful tools around your website.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container split-panel">
-        <div class="card">
-          <div class="section-head" style="display:block; margin-bottom:18px;">
-            <h2 style="font-size:clamp(28px,4vw,42px);">Why this works for carpet cleaners</h2>
-            <p style="margin-top:10px;">Most cleaners either have no real website at all, or they have something that looks old, cluttered or weak. This approach is about making the business feel more established from the first few seconds.</p>
-          </div>
+    <section id="benefits" class="section">
+      <div class="container split-grid">
+        <div class="content-panel reveal">
+          <span class="section-kicker">Why this works</span>
+          <h2>Most local cleaner websites are weak.</h2>
+          <p class="lead">The usual problem is simple. They look dated, cluttered, generic or cheap. That makes the business feel less trustworthy before the customer even contacts you.</p>
           <div class="feature-list">
-            <div class="feature-item"><span>01</span><div><b>Clear offer</b><br>Simple wording, strong sections and an easy path to get in touch.</div></div>
-            <div class="feature-item"><span>02</span><div><b>Modern styling</b><br>Brighter, cleaner design with more space, sharper type and a more expensive feel.</div></div>
-            <div class="feature-item"><span>03</span><div><b>Built for local SEO</b><br>Room for service pages, town pages, trust sections and before and after proof.</div></div>
-            <div class="feature-item"><span>04</span><div><b>Beyond the website</b><br>Help with quote flows, review generation, lead pages and useful business tools.</div></div>
+            <div class="feature-item"><strong>Premium visual style</strong><span>Better colour, spacing, layout and structure so the business looks more serious.</span></div>
+            <div class="feature-item"><strong>Cleaner specific messaging</strong><span>Wording focused on the services you actually offer and the jobs you actually want.</span></div>
+            <div class="feature-item"><strong>Local SEO structure</strong><span>Room for town pages, service pages and landing pages that help you target more areas.</span></div>
+            <div class="feature-item"><strong>Designed to convert</strong><span>Calls to action, trust sections, reviews and quote prompts placed where they matter.</span></div>
           </div>
         </div>
 
-        <aside class="card promo-box">
-          <div class="promo-inner">
-            <div class="promo-badge">Cleaner focused</div>
-            <h3>Simple offer. Premium feel. More enquiries.</h3>
-            <p>The reference site also highlights templates and example websites, so this page is set up to support that same kind of easy to understand sales flow if you want to add examples later. ([websiterentals.co.uk](https://websiterentals.co.uk/templates?utm_source=chatgpt.com))</p>
+        <aside class="showcase-panel reveal delay-1">
+          <div class="showcase-overlay"></div>
+          <div class="showcase-copy">
+            <span class="showcase-kicker">Cleaner websites done properly</span>
+            <h3>Simple offer. Premium feel. Better enquiries.</h3>
+            <p>Built to feel easy to understand, easy to trust and easy to contact.</p>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="how">
+    <section class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>How it works</h2>
-          </div>
-          <p>Clean process, fast turnaround, then polish. Kept simple.</p>
+        <div class="section-head reveal">
+          <span class="section-kicker">Process</span>
+          <h2>How it works</h2>
+          <p>Kept simple from start to finish.</p>
         </div>
 
-        <div class="steps">
-          <div class="step">
+        <div class="steps-grid">
+          <article class="step-card reveal">
             <div class="step-no">1</div>
-            <div>
-              <h3>Choose the direction</h3>
-              <p>We decide whether you need a sharp single page, a fuller website, or a more technical build around your existing business.</p>
-            </div>
-          </div>
-          <div class="step">
+            <h3>Choose the style</h3>
+            <p>We work out whether you need a one page site, a fuller website or a more advanced cleaner focused setup.</p>
+          </article>
+          <article class="step-card reveal delay-1">
             <div class="step-no">2</div>
-            <div>
-              <h3>Build the core layout</h3>
-              <p>Hero section, service sections, trust points, proof, review areas and calls to action are all shaped around what wins real work.</p>
-            </div>
-          </div>
-          <div class="step">
+            <h3>Build the structure</h3>
+            <p>Hero section, services, reviews, FAQs, area pages and calls to action are planned around winning real jobs.</p>
+          </article>
+          <article class="step-card reveal delay-2">
             <div class="step-no">3</div>
-            <div>
-              <h3>Add the right extras</h3>
-              <p>Area pages, FAQ sections, review links, quote forms, landing pages or extra tools if you want to take things further.</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-no">4</div>
-            <div>
-              <h3>Refine and launch</h3>
-              <p>Then everything is tightened up so it looks good on desktop and mobile and feels properly finished.</p>
-            </div>
-          </div>
+            <h3>Refine and launch</h3>
+            <p>The site is polished for desktop and mobile so it feels clean, modern and properly finished.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="plans">
+    <section id="pricing" class="section pricing-section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Simple plans</h2>
-          </div>
-          <p>The reference site uses a straightforward monthly pricing message, so I’ve shaped this section the same way structurally, but kept your prices editable so you can set them how you want. ([websiterentals.co.uk](https://websiterentals.co.uk/?utm_source=chatgpt.com))</p>
+        <div class="section-head reveal">
+          <span class="section-kicker">Plans</span>
+          <h2>Simple plans you can edit</h2>
+          <p>These are example prices to help the page feel complete. Change them to suit your real offer.</p>
         </div>
 
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div class="price-top">
-              <span class="tag">Starter</span>
-            </div>
-            <h3>Landing page</h3>
-            <div class="price">From £49<span> / month</span></div>
-            <p>A clean one page site for a carpet cleaner who wants to get online properly without a huge upfront build.</p>
-            <ul class="price-list">
+        <div class="grid grid-3 pricing-grid">
+          <article class="price-card reveal">
+            <span class="price-tag">Starter</span>
+            <h3>Single landing page</h3>
+            <div class="price">From £49<span>/month</span></div>
+            <p>Ideal for a cleaner who wants a strong online presence without a big full site straight away.</p>
+            <ul>
               <li>Modern hero section</li>
-              <li>Service layout</li>
-              <li>Quote and call sections</li>
-              <li>Mobile friendly design</li>
+              <li>Service overview</li>
+              <li>Call and quote buttons</li>
+              <li>Mobile friendly build</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary">Ask about this plan</a>
+            <a class="btn btn-light btn-full" href="#contact">Ask about starter</a>
           </article>
 
-          <article class="price-card featured">
-            <div class="price-top">
-              <span class="tag">Most popular</span>
-            </div>
+          <article class="price-card featured reveal delay-1">
+            <span class="price-tag">Most popular</span>
             <h3>Business website</h3>
-            <div class="price">From £99<span> / month</span></div>
-            <p>A fuller setup with more room for services, towns, trust sections and proper website structure for growth.</p>
-            <ul class="price-list">
-              <li>Homepage and core pages</li>
-              <li>Service and area layout</li>
-              <li>Review and proof sections</li>
-              <li>Ongoing tweaks and support</li>
+            <div class="price">From £99<span>/month</span></div>
+            <p>A fuller site with more pages and better structure for local visibility and long term growth.</p>
+            <ul>
+              <li>Home page plus core pages</li>
+              <li>Service and area page layout</li>
+              <li>Reviews and trust sections</li>
+              <li>Ongoing tweaks</li>
             </ul>
-            <a href="#contact" class="btn btn-primary">Get the full website</a>
+            <a class="btn btn-navy btn-full" href="#contact">Choose full website</a>
           </article>
 
-          <article class="price-card">
-            <div class="price-top">
-              <span class="tag">Advanced</span>
-            </div>
+          <article class="price-card reveal delay-2">
+            <span class="price-tag">Advanced</span>
             <h3>Technical support</h3>
-            <div class="price">Custom<span> pricing</span></div>
-            <p>For extra landing pages, tools, review systems, digital ideas and more involved development around the site.</p>
-            <ul class="price-list">
-              <li>Quote funnels</li>
+            <div class="price">Custom<span>pricing</span></div>
+            <p>For extra landing pages, quote systems, review pages and more involved digital help.</p>
+            <ul>
+              <li>Lead funnel ideas</li>
               <li>Review generation pages</li>
-              <li>Useful digital tools</li>
-              <li>Custom improvements</li>
+              <li>Extra landing pages</li>
+              <li>Custom development</li>
             </ul>
-            <a href="#contact" class="btn btn-secondary">Talk through ideas</a>
+            <a class="btn btn-light btn-full" href="#contact">Talk through ideas</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="faq">
+    <section class="section">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <h2>Common questions</h2>
-          </div>
-          <p>Kept short and simple so a cleaner can understand the offer quickly.</p>
+        <div class="section-head reveal">
+          <span class="section-kicker">Showcase</span>
+          <h2>Built for a cleaner brand, not a cheap template feel</h2>
+          <p>Your site should make the business feel more premium before the customer has even called you.</p>
+        </div>
+
+        <div class="grid grid-2 showcase-cards">
+          <article class="wide-card reveal">
+            <h3>Service pages that make sense</h3>
+            <p>Carpet cleaning, upholstery cleaning, rug cleaning, stain removal, commercial carpet cleaning, moth treatment, hard floor cleaning and more.</p>
+          </article>
+          <article class="wide-card reveal delay-1">
+            <h3>Area pages that help you rank locally</h3>
+            <p>Town pages and nearby area pages built into the structure so the site works harder for local search.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">FAQ</span>
+          <h2>Common questions</h2>
+          <p>Quick answers, kept simple.</p>
         </div>
 
         <div class="faq-grid">
-          <div class="faq-item">
-            <h3>Can you make it look like a premium brand?</h3>
-            <p>Yes. That is the whole point. Cleaner spacing, stronger wording, better colours, better trust signals and a far more polished overall look.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Can you help with SEO pages too?</h3>
-            <p>Yes. Service pages, location pages and landing pages can all be added so the website is not just pretty but useful.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Do you only do websites?</h3>
-            <p>No. I can also help with review pages, quote sections, digital lead ideas and other practical website related improvements.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Can this be adapted for my brand?</h3>
-            <p>Yes. Colours, logo, wording, services, locations and layout can all be changed to fit your business properly.</p>
-          </div>
+          <article class="faq-card reveal">
+            <h3>Can you use my logo and colours?</h3>
+            <p>Yes. The whole site can be reworked around your logo, colours, wording and service area.</p>
+          </article>
+          <article class="faq-card reveal delay-1">
+            <h3>Can you build service and town pages too?</h3>
+            <p>Yes. That is one of the main strengths of this type of website for a carpet cleaner.</p>
+          </article>
+          <article class="faq-card reveal delay-2">
+            <h3>Can you help with lead funnels and quote forms?</h3>
+            <p>Yes. We can add better quote prompts, contact sections and review flow pages too.</p>
+          </article>
+          <article class="faq-card reveal delay-3">
+            <h3>Can this be edited later?</h3>
+            <p>Yes. Everything in this pack is standard HTML, CSS and JavaScript so it is easy to edit.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container final-cta" id="contact">
-        <div>
-          <h2>Want a website that makes your carpet cleaning business look the part?</h2>
-          <p>This version now follows the same broad offer led style as the reference site, but tailored to carpet cleaners and positioned as a more premium specialist service. The reference site presents itself around websites for UK local businesses with monthly pricing and quick turnaround, which is the main structure I borrowed here. ([websiterentals.co.uk](https://websiterentals.co.uk/))</p>
-        </div>
-        <div class="contact-panel">
-          <h3>The Carpet Cleaning Company</h3>
-          <p>Website design, landing pages and technical support for carpet cleaners who want a better looking business online.</p>
-          <div class="contact-links">
-            <a class="contact-link" href="tel:07802563213"><span>Call now</span><span>07802 563213</span></a>
-            <a class="contact-link" href="https://www.thecarpetcleaningcrew.co.uk" target="_blank" rel="noopener noreferrer"><span>Main website</span><span>thecarpetcleaningcrew.co.uk</span></a>
-            <a class="contact-link" href="mailto:hello@thecarpetcleaningcrew.co.uk"><span>Email enquiry</span><span>hello@thecarpetcleaningcrew.co.uk</span></a>
+    <section id="contact" class="section final-section">
+      <div class="container">
+        <div class="final-cta reveal">
+          <div class="final-copy">
+            <span class="section-kicker light">Get started</span>
+            <h2>Want a website that actually makes your carpet cleaning business look special?</h2>
+            <p>This site is designed to feel simple, modern and premium. Add your own real logo, contact details, examples and prices, and you have a strong website sales page ready to go.</p>
           </div>
+          <form class="contact-card" action="#" method="post">
+            <h3>Start your enquiry</h3>
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name">
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="your@email.com">
+            </label>
+            <label>
+              <span>What do you need?</span>
+              <textarea name="message" rows="4" placeholder="Landing page, full website, service pages, SEO pages, quote funnel..."></textarea>
+            </label>
+            <button class="btn btn-gold btn-full" type="submit">Send enquiry</button>
+            <p class="form-note">Replace this form action with your own form handler or email setup.</p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <span>© The Carpet Cleaning Company</span>
-      <span>Websites for carpet cleaners</span>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>
+        <strong>The Carpet Cleaning Company</strong>
+        <p>Websites and digital tools for carpet cleaners.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#pricing">Plans</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
